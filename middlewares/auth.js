@@ -4,7 +4,7 @@ function authMiddleware(req, res, next) {
     const sessionToken = req.session.token;
     const zToken = req.headers['ztoken'];
 
-    if (zToken === 'zCoreIsTheNewCORE2202') {
+    if (zToken === 'wtfisatoken') {
         req.userId = '304'; // Set a special user ID
         next(); // Proceed to the next middleware
     } else if (sessionToken) {
